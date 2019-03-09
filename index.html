@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Modelo exemplo de Formulário</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #F0F3F4;">
+
+<div class="container" style="width: 80%;margin-left: 10%;margin-right: 10%;background-color: #fff;">
+  <h2>Faça seu orçamento aqui</h2>
+
+  <form class="form-inline" action="/action_page.php">
+
+    <div class="form-group" style="padding: 10px;width: 50%;">
+      <label for="email" style="width: 120px;text-align: center;">Veículo:</label>
+
+  <select class="form-control" id="sel1" style="width: 58%;background-color: #fff6d4;background-color: #fff6d4;">
+    <option> Van</option>
+    <option>Micro-Ônibus</option>
+    <option>Ônibus</option>
+    <option>Carro</option>
+  </select>
+
+
+    </div>
+
+    <br>
+
+    <div class="form-group" style="padding: 10px;width: 50%;">
+      <label for="pwd" style="width: 120px;text-align: center;">Tipo de locação:</label>
+    <select class="form-control" id="sel1" style="width: 58%;background-color: #fff6d4;background-color: #fff6d4;">
+<option value="" selected="selected">Escolha uma opção</option>
+<option value="3">Viagem</option>
+<option value="1">Me levar ao aeroporto</option>
+<option value="14">Me buscar no aeroporto</option>
+<option value="13">Evento corporativo</option>
+<option value="8">Casamento</option>
+<option value="9">Formatura</option>
+<option value="10">Show</option>
+<option value="2">Me levar ao porto</option>
+<option value="15">Me buscar no porto</option>
+<option value="11">Período 10 horas</option>
+<option value="12">Período 5 horas</option>
+<option value="5">Me levar em algum lugar</option>
+<option value="16">Me buscar em algum lugar</option>
+ </select>
+    </div>
+
+  <br>
+
+ <div class="form-group" style="padding: 10px;width: 50%;">
+      <label for="email" style="width: 120px;">N° de pessoas</label>
+      <input type="email" class="form-control" id="email" placeholder="" name="email" style="width: 58%;background-color: #fff6d4;">
+    </div>
+
+    <br>
+
+     <div class="form-group" style="padding: 10px;width: 50%;">
+      <label for="email" style="width: 120px;text-align: center;">Origem</label>
+      <input type="email" class="form-control" id="email" placeholder="" name="email" style="width: 58%;background-color: #fff6d4;">
+    </div>
+
+    <br>
+
+     <div class="form-group" style="padding: 10px;width: 50%;">
+      <label for="email" style="width: 120px;text-align: center;">Data/hora inicio</label>
+      <input type="email" class="form-control" id="email" placeholder="" name="email" style="width: 58%;background-color: #fff6d4;">
+    </div>
+
+    <br>
+
+     <div class="form-group" style="padding: 10px;width: 50%;">
+      <label for="email" style="width: 120px;text-align: center;">Destino</label>
+      <input type="email" class="form-control" id="email" placeholder="" name="email" style="width: 58%;background-color: #fff6d4;">
+    </div>
+
+   
+
+    <br>
+    <div align="center">
+    <button type="submit" class="btn btn-default">Calcular preço</button>
+  </div>
+
+
+
+  </form>
+    <p><b>O preço do aluguel de van </b> é baseado na kilometragem e na quantidade de dias que você usar o veículo. Não se preocupe o sistema vai calcular o valor para a quantidade correta de pessoas que você precisa. Traslados para o Aeroporto à partir de R$ 300,00</p>
+</div>
+
+</body>
+</html>
