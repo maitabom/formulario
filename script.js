@@ -24,6 +24,19 @@ $(function () {
             time_24hr: true
         });
     });
+
+    $("#calcular").click(function(event){
+        event.preventDefault();
+        
+        $(".modal").modal({
+            showClose: false,
+            fadeDuration: 900
+        });
+        
+        setTimeout(function(){
+            $(".form-inline").submit();
+        }, 2500);        
+    });
 });
 
 function atualizarDataInicial() {
@@ -37,4 +50,4 @@ function atualizarDataInicial() {
     adata = adata.reverse();
 
     return adata[0] + "-" + adata[1] + "-" + adata[2];
-}
+};
