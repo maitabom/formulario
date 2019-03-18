@@ -25,16 +25,27 @@ $(function () {
         });
     });
 
-    $("#tipo_locacao").change(function () {
-        $("#destino").show();
-        var questionaveis = [1, 2, 5, 11, 12, 14, 15, 16];
-        var tipo = eval($(this).val());
+    $("#data_termino").change(function () {
 
-        if (questionaveis.includes(tipo)) {
-            $("#questao").modal({
-                showClose: false,
-                fadeDuration: 300
-            });
+    });
+
+    $("#tipo_locacao").change(function () {
+        if ($(this).val() == "") {
+            $("#final").hide();
+            $("#destino").hide();
+        } else {
+            $("#destino").show();
+            var questionaveis = [1, 2, 5, 11, 12, 14, 15, 16];
+            var tipo = eval($(this).val());
+
+            if (questionaveis.includes(tipo)) {
+                $("#questao").modal({
+                    showClose: false,
+                    fadeDuration: 300
+                });
+            } else {
+                $("#final").show();
+            }
         }
     });
 
