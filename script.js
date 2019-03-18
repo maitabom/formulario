@@ -21,12 +21,18 @@ $(function () {
             locale: "pt",
             dateFormat: "d/m/Y H:i",
             enableTime: true,
-            time_24hr: true
+            time_24hr: true,
+            onClose: function () {
+                var tempo = calcularTempoDataHora($("#data_inicio").val(), $("#data_termino").val());
+
+                if (tempo != null && tempo > 24) {
+                    $("#disponibilidade").modal({
+                        showClose: false,
+                        fadeDuration: 300
+                    });
+                }
+            }
         });
-    });
-
-    $("#data_termino").change(function () {
-
     });
 
     $("#tipo_locacao").change(function () {
@@ -85,3 +91,29 @@ function atualizarDataInicial() {
 
     return adata[0] + "-" + adata[1] + "-" + adata[2];
 };
+
+function calcularTempoDataHora(sDataInicio, sDataTermino) {
+    var pivot_data_inicio = sDataInicio.split(" ");
+    var pivot_data_termino = sDataTermino.split(" ");
+
+    if (pivot_data_inicio.length == 2 && pivot_data_termino.length == 2) {
+        var data_inicio = pivot_data_inicio[0];
+        var data_termino = pivot_data_termino[0];
+        var hora_inicio = pivot_data_inicio[1];
+        var hora_termino = pivot_data_termino[1];
+
+        data_inicio = data_inicio.split("/");
+        data_termino = data_termino.split("/");
+        hora_inicio = hora_inicio.split(":");
+        hora_termino = hora_termino.split(":");
+
+        var dataInicio = new Date(data_inicio[2], data_inicio[1], data_inicio[0], hora_inicio[0], hora_inicio[1]);
+        var dataTermino = new Date(data_termino[2], data_termino[1], data_termino[0], hora_termino[0], hora_termino[1]);
+        var dms = (dataTermino - dataInicio);
+        var dhr = (dms / 3600000);
+
+        return dhr;
+    } else {
+        return null;
+    }
+}
