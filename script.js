@@ -77,6 +77,16 @@ $(function () {
         $.modal.close();
         $("#final").hide();
     });
+
+    $("#disponivel").click(function () {
+        $.modal.close();
+        $("#disponibilidade").val("1");
+    });
+
+    $("#indisponivel").click(function () {
+        $.modal.close();
+        $("#disponibilidade").val("0");
+    });
 });
 
 function atualizarDataInicial() {
