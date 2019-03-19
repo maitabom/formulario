@@ -27,10 +27,10 @@
         <h2>Faça seu orçamento aqui</h2>
 
         <form class="form-inline" action="sucesso.html">
-            <input type="hidden" id="disponibilidade" name="disponibilidade"/>
+            <input type="hidden" id="vdisponivel" name="disponivel" value="">
             <div class="form-group" style="padding: 10px;width: 50%;">
                 <label for="email" style="width: 120px;text-align: center;">Veículo:</label>
-                <select class="form-control" id="sel1"
+                <select class="form-control" id="sel1" name="veiculo"
                     style="width: 58%;background-color: #fff6d4;background-color: #fff6d4;">
                     <option> Van</option>
                     <option>Micro-Ônibus</option>
@@ -43,7 +43,7 @@
 
             <div class="form-group" style="padding: 10px;width: 50%;">
                 <label for="pwd" style="width: 120px;text-align: center;">Tipo de locação:</label>
-                <select class="form-control" id="tipo_locacao"
+                <select class="form-control" id="tipo_locacao" name="tipo"
                     style="width: 58%;background-color: #fff6d4;background-color: #fff6d4;">
                     <option value="" selected="selected">Escolha uma opção</option>
                     <option value="3">Viagem</option>
@@ -66,7 +66,7 @@
 
             <div class="form-group" style="padding: 10px;width: 50%;">
                 <label for="email" style="width: 120px;">N° de pessoas</label>
-                <input type="email" class="form-control" id="email" placeholder="" name="email"
+                <input type="email" class="form-control" id="email" placeholder="" name="quantidade"
                     style="width: 58%;background-color: #fff6d4;">
             </div>
 
@@ -74,7 +74,7 @@
 
             <div class="form-group" style="padding: 10px;width: 50%;">
                 <label for="email" style="width: 120px;text-align: center;">Origem</label>
-                <input type="email" class="form-control" id="email" placeholder="" name="email"
+                <input type="email" class="form-control" id="email" placeholder="" name="origem"
                     style="width: 58%;background-color: #fff6d4;">
             </div>
 
@@ -82,8 +82,8 @@
 
             <div class="form-group" style="padding: 10px;width: 50%;">
                 <label for="email" style="width: 120px;text-align: center;">Data/hora inicio</label>
-                <input id="data_inicio" type="text" class="datahora form-control" id="email" placeholder="" name="email"
-                    style="width: 58%;background-color: #fff6d4;">
+                <input id="data_inicio" type="text" class="datahora form-control" id="inicio" placeholder=""
+                    name="inicio" style="width: 58%;background-color: #fff6d4;">
             </div>
 
             <br>
@@ -91,7 +91,7 @@
             <div id="destino" style="display: none">
                 <div class="form-group" style="padding: 10px;width: 50%;">
                     <label for="email" style="width: 120px;text-align: center;">Destino</label>
-                    <input type="email" class="form-control" id="email" placeholder="" name="email"
+                    <input type="email" class="form-control" id="email" placeholder="" name="destino"
                         style="width: 58%;background-color: #fff6d4;">
                 </div>
 
@@ -100,13 +100,13 @@
                 <div id="final" style="display: none">
                     <div class="form-group" style="padding: 10px;width: 50%;">
                         <label for="email" style="width: 120px;text-align: center;">Data/hora término</label>
-                        <input id="data_termino" type="text" class="datahora form-control" id="email" placeholder=""
+                        <input id="data_termino" type="text" class="datahora form-control" id="fim" placeholder=""
                             name="email" style="width: 58%;background-color: #fff6d4;">
                     </div>
                 </div>
 
             </div>
-
+            <div style="display: none"></div>
             <div align="center">
                 <button id="calcular" type="button" class="btn btn-default">Calcular preço</button>
             </div>
@@ -126,9 +126,11 @@
     </div>
     <div id="disponibilidade" class="modal">
         <h4>Precisará do veículo, durante o período?</h4>
-        <button id="disponivel" type="button" class="btn btn-default btn-block">Sim, preciso do veículo à minha disposição
+        <button id="disponivel" type="button" class="btn btn-default btn-block">Sim, preciso do veículo à minha
+            disposição
             todos os dias/horas</button>
-        <button id="indisponivel" type="button" class="btn btn-default btn-block">Não, preciso que o veículo leve no dia e volte
+        <button id="indisponivel" type="button" class="btn btn-default btn-block">Não, preciso que o veículo leve no dia
+            e volte
             para buscar no dia</button>
     </div>
 

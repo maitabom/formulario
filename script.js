@@ -80,12 +80,12 @@ $(function () {
 
     $("#disponivel").click(function () {
         $.modal.close();
-        $("#disponibilidade").val("1");
+        $("#vdisponivel").val("1");
     });
 
     $("#indisponivel").click(function () {
         $.modal.close();
-        $("#disponibilidade").val("0");
+        $("#vdisponivel").val("0");
     });
 });
 
